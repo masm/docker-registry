@@ -1,0 +1,23 @@
+version: 0.1
+log:
+  level: info
+  formatter: logstash
+  fields:
+    service: registry
+storage:
+  cache:
+    layerinfo: inmemory
+  s3:
+    accesskey: <override>
+    secretkey: <override>
+    region: <override>
+    bucket: <override>
+    secure: true
+    v4auth: true
+reporting:
+  newrelic:
+    licensekey: <override>
+    name: registry
+http:
+  addr: :5000
+  secret: <override>
